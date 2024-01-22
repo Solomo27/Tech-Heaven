@@ -1,0 +1,91 @@
+.collection {
+   width: 100%;
+   padding-top: 80px;
+   display: flex;
+   height: 100%;
+   
+
+   flex-direction: column;
+   align-items: center;
+   .title {
+      font-weight: 600;
+      font-size: 24px;
+   }
+
+      .slider {
+         margin-top: 100px;
+         width: 70%; 
+         
+      }
+
+      .slick-dots {
+         bottom: -100px;
+      }
+
+      .slick-dots li {
+         width: 40px;
+         height: 20px;
+      }
+
+      .item {
+        width: 100%; // Full-width slides
+        display: flex;
+        height: 400px;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        gap: 5px;
+  
+        .img-cont {
+          width: 100%;
+          height: 300px;
+          background: #f2f2f2;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+  
+        img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+  
+        h4,
+        p {
+          align-self: flex-start;
+          font-weight: 400;
+          text-transform: capitalize;
+          letter-spacing: 1px;
+        }
+
+        h4 {
+         font-size: 20px;
+         font-weight: bold;
+         max-width: 100%; /* Adjust the maximum width according to your design */
+         overflow: hidden;
+         text-overflow: ellipsis;
+         white-space: nowrap;
+        }
+
+        .desc {
+         max-width: 100%; /* Adjust the maximum width according to your design */
+         overflow: hidden;
+         text-overflow: ellipsis;
+         white-space: nowrap;
+       }
+
+      }
+
+      .arrows {
+         cursor: pointer;
+         font-size: 24px;
+         margin-top: -250px;
+         width: 100%;
+         display: flex;
+         justify-content: space-between;
+         padding: 0 150px;
+         
+      }
+ 
+
+}
