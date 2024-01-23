@@ -42,7 +42,7 @@ const Categorys = () => {
         {categorys.map((item, i) => (
           <div key={i} className='item'>
           <img src={item.img} /> 
-          <Link onClick={() => setCurrentCategory(item.value) } className='link-btn' to={'/shop'}>{item.value}</Link>
+          <Link to={'/shop'} onClick={() => setCurrentCategory(item.value) } className='link-btn'>{item.value}</Link>
         </div>
         ))}
       </div>

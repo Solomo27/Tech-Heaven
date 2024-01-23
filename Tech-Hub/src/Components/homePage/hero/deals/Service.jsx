@@ -11,19 +11,19 @@ const Service = () => {
         </div>
 
         <div>
-            <i class="fa-solid fa-money-bill"></i>      
+            <i className="fa-solid fa-money-bill"></i>      
             <h4>Money Guarantee</h4>
             <p>Within 30 days for an exchange</p>
         </div>
 
         <div>
-          <i class="fa-solid fa-headphones"></i>
+          <i className="fa-solid fa-headphones"></i>
           <h4>Online Support</h4>
           <p>24 hours a day, 7 days a week</p>
         </div>
 
         <div>
-            <i class="fa-regular fa-credit-card"></i>
+            <i className="fa-regular fa-credit-card"></i>
           <h4>Flexible Payment</h4>
           <p>Pay with multiple credit cards</p>
         </div>

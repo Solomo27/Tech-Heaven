@@ -1,21 +1,107 @@
 .shop {
- 
-    padding: 200px 250px;
+    margin-top: 200px;
+    padding: 0px 250px;
     display: flex;
+    gap: 100px;
+    width: 100%;
+
+    @media (max-width: 1200px) {
+        padding: 0 100px;
+    }
+    @media (max-width: 980px) {
+        padding: 0 50px;
+    }
+
+    .wrapper {
+        position: fixed;
+    }
+    .products {
+        margin-left: 300px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        width: 400px;
+
+        @media (max-width: 1200px) {
+            grid-template-columns: 1fr 1fr;
+            
+        }
+
+        .item {
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: 400px;   
+            cursor: pointer;
+
+            @media (max-width: 1200px) {
+                width: 300px;
+            }
+            @media (max-width: 980px) {
+                width: 250px;
+            }
+
+            .img-cont {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #f2f2f2;
+                height: 300px;
+            }
+            img {
+                width: 200px;
+                margin-bottom: 20px;
+            }
+      
+            h4,
+            p {
+              align-self: flex-start;
+              font-weight: 400;
+              text-transform: capitalize;
+              letter-spacing: 1px;
+            }
+    
+            h4 {
+             font-size: 20px;
+             font-weight: bold;
+             max-width: 100%; /* Adjust the maximum width according to your design */
+             overflow: hidden;
+             text-overflow: ellipsis;
+             white-space: nowrap;
+            }
+    
+            .desc {
+             max-width: 100%; /* Adjust the maximum width according to your design */
+             overflow: hidden;
+             text-overflow: ellipsis;
+             white-space: nowrap;
+           }
+    
+          }
+    }
+
+    .sort {
+        margin-top: 10px;
+    }
 
     .label {
         margin-top: 20px;
         display: flex;
         gap: 20px;
         margin-bottom: 10px;
-        
+        font-size: 18px;
         text-transform: capitalize;
-        input {
-            width: 30px;
-            font-family: 'Noto Sans', sans-serif;
-        }
+    }
+    input {
+        width: 30px;   
+        cursor: pointer; 
     }
 
+    label {
+        font-family: 'Noto Sans', sans-serif;
+        font-size: 18px;
+    }
     
 
     form {
@@ -33,5 +119,6 @@
 
     h3 {
         font-family: 'Noto Sans', sans-serif;
+        font-size: 22px;
     }
 }
