@@ -12,21 +12,34 @@ const ProductPage = () => {
 
   const [addedToCart, setAddedToCart] = useState(false)
   const { id } = useParams()
-  const i = id + 0
-  const { products } = useAppContext()
+  const { products, setCart, cart } = useAppContext()
 
   const product = products.find(item  => item.id == id)
   const relatedProducts = products.filter(item => item.category === product.category).filter(item => item.id != id)
-  console.log(relatedProducts)
+  console.log(cart)
+
   
 
   const viewCart = (
-      <button>
         <Link className='link' to={'/cart'}>
-        View Cart <i className="fa-solid fa-check" style={{marginLeft: '10px'}}></i>
+          <button style={{width: '100%'}}>
+            View Cart <i className="fa-solid fa-check" style={{marginLeft: '10px'}}></i>
+          </button>
         </Link>
-      </button>
   )
+
+  function handleClick() {
+    setAddedToCart(prev => !prev)
+
+   // const updatedCart = [...cart, {...product, quantity: 1}]
+    const existingIndex = cart.findIndex(item => item.id === product.id)
+    if(existingIndex !== -1) {
+      setCart(prev => prev.map((item,i) => i === existingIndex ? {...item, quantity: item.quantity + 1}: item ))
+    } else {
+      setCart(prev => [...prev, {...product, quantity: 1}])
+    }
+  }
+
 
   return (
     <div className='product'>
@@ -40,7 +53,7 @@ const ProductPage = () => {
           <h4>Description</h4>
           <p className='desc'>{product.desc}</p>
           {
-            !addedToCart ? <button onClick={() => setAddedToCart(prev => !prev)}>Add To Cart</button> : viewCart
+            !addedToCart ? <button onClick={handleClick}>Add To Cart</button> : viewCart
           }
         </div>
       </div>
@@ -50,7 +63,7 @@ const ProductPage = () => {
         <div className='related-products'>
           {
             relatedProducts.map((item, i) => (
-              <Link to={`/product/${item.id}`} key={i}>
+              <Link onClick={() => setAddedToCart(prev => false)} to={`/product/${item.id}`} key={i}>
                 <div className='item'>
                   <div className='img-cont'>
                     <img src={item.img} alt={item.name} />

@@ -3,6 +3,7 @@ import './shop.scss'
 import { useAppContext } from '../Global'
 import { Link } from 'react-router-dom'
 
+
 const Shop = () => {
   useEffect(() => {
     // Scroll to the top of the page when the component mounts
@@ -29,6 +30,7 @@ const Shop = () => {
 
   const filteredProducts = checkedCategory === 'all' ? products: products.filter(item => item.category === checkedCategory)
 
+
   return (
     <div className='shop'>
       <div className='wrapper'>
@@ -54,21 +56,24 @@ const Shop = () => {
           ))}
         
         </div>
-    </div>      
-      <div className='products'>
-        {filteredProducts.map((item, i) => (
-            <Link key={i} to={`/product/${item.id}`}>
-              <div className="item">
-                <div className="img-cont">
-                  <img src={item.img} alt={item.name} />
-                </div>
-                <h4>{item.name}</h4>
-                <p>{item.price} kr</p>
-              </div>
-            </Link>
-          ))}
       </div>
-    </div>
+    
+          
+        <div className='products'>
+          {filteredProducts.map((item, i) => (
+              <Link key={i} to={`/product/${item.id}`}>
+                <div className="item">
+                  <div className="img-cont">
+                    <img src={item.img} alt={item.name} />
+                  </div>
+                  <h4>{item.name}</h4>
+                  <p>{item.price} kr</p>
+                </div>
+              </Link>
+            ))}
+        </div>
+      </div>
+   
   )
 }
 

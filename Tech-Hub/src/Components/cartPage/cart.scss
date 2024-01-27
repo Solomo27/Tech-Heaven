@@ -1,0 +1,317 @@
+.cart {
+    margin-top: 150px;
+    padding:  0 250px;
+    height: 110vh;
+    overflow: hidden;
+    @media (max-width: 1500px) {
+        padding: 0 100px;
+    }
+    @media (max-width: 980px) {
+        padding: 0 50px;
+    }
+    @media (max-width: 560px) {
+        padding: 0 10px;
+    }
+    
+
+    .shop {
+        margin: 50px 0;
+        width: 100%;
+        height: 200px;
+        background: #f2f2f2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        z-index: 3;
+        h3 {
+            font-size: 24px;
+            font-family: 'Noto Sans', sans-serif;
+            @media (max-width: 1200px) {
+                font-size: 20px;
+                
+            }
+            @media (max-width: 1000px) {
+                font-size: 16px;
+            }
+        }
+         p {
+            font-size: 16px;
+            font-family: 'Noto Sans', sans-serif;
+            @media (max-width: 1200px) {
+                font-size: 14px;
+                
+            }
+            @media (max-width: 1000px) {
+                font-size: 12px;
+            }
+        }
+        button {
+            padding: 10px 15px;
+            font-family: 'Noto Sans', sans-serif;
+            background: #000;
+            color: white;
+            border: .5px solid black;
+            outline: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: white;
+            color: black;
+        }
+    }
+
+    .checkout {
+        border-left: 1px solid #f2f2f2;
+        padding: 15px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @media (max-width: 600px) {
+            padding: 5px;
+        }
+        @media (max-width: 830px) {
+            width: 100%;
+        }
+        
+    
+        .heading {
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            border-bottom: 1px solid #f2f2f2;
+            padding: 5px 0px;
+            @media (max-width: 1200px) {
+                font-size: 18px;
+                
+            }
+            @media (max-width: 1000px) {
+                font-size: 16px;
+            }
+
+        }
+        .delivary {
+            border-bottom: 1px solid #f2f2f2;
+            padding: 5px 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 400;
+            @media (max-width: 1200px) {
+                font-size: 16px;
+                
+            }
+            @media (max-width: 1000px) {
+                font-size: 14px;
+            }
+            @media (max-width: 600px) {
+                flex-direction: column;
+                gap: 10px;
+            }
+            p{
+                font-family: 'Noto Sans', sans-serif;
+            }
+        }
+        .total {
+            border-bottom: 1px solid #f2f2f2;
+            padding: 5px 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @media (max-width: 600px) {
+                flex-direction: column;
+                gap: 10px;
+            }
+            h4 {
+                font-size: 20px;
+                font-weight: 600;
+                font-family: 'Noto Sans', sans-serif;
+                @media (max-width: 1200px) {
+                    font-size: 18px;
+                    
+                }
+                @media (max-width: 1000px) {
+                    font-size: 16px;
+                }
+            }
+        }
+        button {
+            padding: 10px;
+            background: #000;
+            color: white;
+            font-family: 'Noto Sans', sans-serif;
+            border: .5px solid black;
+            outline: 0;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        button:hover {
+            background: white;
+            color: black;
+
+        }
+    }
+
+
+    .title {
+        display: flex;
+        width: 54%;
+        margin-top: 15px;
+        justify-content: space-between;
+        h4 {
+            font-family: 'Noto Sans', sans-serif;
+        }
+    }
+
+    .cart-items {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        gap: 5%;
+        .item-cont {
+            width: 100%;
+        }
+        @media (max-width: 830px) {
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .item {
+           border-bottom: 1px solid #f2f2f2;
+           padding: 10px 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .desc {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                @media (max-width: 449px) {
+                    gap: 5px;
+                }
+                h3 {
+                    font-family: 'Noto Sans', sans-serif;
+                    font-size: 20px;
+                    max-width: 60%;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    @media (max-width: 1200px) {
+                        font-size: 18px;
+                        
+                    }
+                    @media (max-width: 1000px) {
+                        
+                        max-width: 150px;
+                    }
+                    @media (max-width: 1200px) {
+                        font-size: 16px;
+                        max-width: 100px;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                    @media (max-width: 855px) {
+                        max-width: 120px;
+                    }
+                    @media (max-width: 500px) {
+                        font-size: 14px;
+                        max-width: 100px;
+                    }
+                }
+                img {
+                    background: #f2f2f2;
+                    padding: 15px 20px;
+                    width: 100px;
+                    @media (max-width: 500px) {
+                        width: 70px;
+                    }
+                }
+            }
+            .quantity {
+                margin-right: 20px;                
+                display: flex;
+                gap: 15px;
+                border: 1px solid black;
+                padding: 10px;
+                border-radius: 10px;
+                font-size: 20px;
+                align-items: center;
+                @media (max-width: 1200px) {
+                    font-size: 18px;
+                    
+                }
+                @media (max-width: 1000px) {
+                    font-size: 16px;
+                }
+                @media (max-width: 449px) {
+                    gap: 8px;
+                    padding: 7px;
+                }
+                @media (max-width: 400px) {
+                    gap: 5px;
+                    padding: 5px;
+                }
+                span {
+                    font-family: 'Noto Sans', sans-serif;
+                }
+                i {
+                    cursor: pointer;
+
+                }
+            }
+            
+                
+                p {
+                    font-family: 'Noto Sans', sans-serif;
+                    font-size: 20px;
+                    @media (max-width: 1200px) {
+                        font-size: 18px;
+                        
+                    }
+                    @media (max-width: 1000px) {
+                        font-size: 16px;
+                    }
+                }
+                .delete {
+                    cursor: pointer;
+                    width: 30px;
+                    @media (max-width: 1200px) {
+                        width: 25px;
+                        
+                    }
+                    @media (max-width: 1000px) {
+                        width: 20px;
+                    }
+                    @media (max-width: 500px) {
+                        width: 18px;
+                    }
+                }
+           
+        }
+
+        
+
+
+    }
+
+    h1 {
+        font-family: 'Noto Sans', sans-serif;
+        border-bottom: 2px solid #f2f2f2;
+        padding-bottom: 5px;
+        @media (max-width: 1200px) {
+            font-size: 24px;
+            
+        }
+        @media (max-width: 1000px) {
+            font-size: 22px;
+        }
+        
+    }
+}

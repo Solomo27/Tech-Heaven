@@ -9,10 +9,9 @@ export const useAppContext = () => useContext(AppContext);
 export const AppContextProvider = ({ children }) => {
   // State variables
   const [products, setProducts] = useState(Data);
-  const [cart, setCart] = useState();
+  const [cart, setCart] = useState([]);
   const [currentCategory, setCurrentCategory] = useState('all');
-  console.log(currentCategory)
-  console.log(products)
+  
 
   // Other state manipulation functions...
 

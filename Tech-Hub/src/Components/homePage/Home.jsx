@@ -1,6 +1,6 @@
 import Hero  from "./hero/Hero"
-import Categorys from './hero/categorys/Categorys'
-import Deals from './hero/deals/Deals'
+import Categorys from './categorys/Categorys'
+import Deals from './deals/Deals'
 import Collections from './collection/Collection'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
