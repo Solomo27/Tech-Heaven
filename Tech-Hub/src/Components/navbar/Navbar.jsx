@@ -17,7 +17,7 @@ const Navbar = () => {
             <Link  to={'/'} className='link'>Home</Link>
             <Link to={'/shop'} className='link'>Shop</Link>
             <div className='cartIcon'>
-                <Link to={'/cart'}><img src="/icons/cart.svg" alt="" /></Link>
+                <Link to={'/cart'}><img src="/icons/cart.svg" alt="Cart Image" /></Link>
                 <span>{`(${cartItems})`}</span>
             </div>
         </div>

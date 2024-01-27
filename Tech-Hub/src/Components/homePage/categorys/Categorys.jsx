@@ -30,7 +30,7 @@ const Categorys = () => {
     }
   ]
 
-  const { setCurrentCategory, currentCategory } = useAppContext()
+  const { setCurrentCategory } = useAppContext()
 
   return (
     <div className='categories'>
@@ -41,7 +41,7 @@ const Categorys = () => {
       <div className='grid-container'>
         {categorys.map((item, i) => (
           <div key={i} className='item'>
-          <img src={item.img} /> 
+          <img src={item.img} alt={item.value}  loading="lazy"/> 
           <Link to={'/shop'} onClick={() => setCurrentCategory(item.value) } className='link-btn'>{item.value}</Link>
         </div>
         ))}

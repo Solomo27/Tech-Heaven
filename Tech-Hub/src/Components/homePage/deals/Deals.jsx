@@ -1,10 +1,8 @@
 import { Link } from 'react-router-dom'
 import './deals.scss'
-import { useState } from 'react'
 import Service from './Service'
 
 const Deals = () => {
-
 
   return (
     <div className='deals'>
@@ -34,7 +32,7 @@ const Deals = () => {
             <button>View Products <i className='fa-solid fa-arrow-right' style={{color: 'white'}}></i></button>
           </Link>
         </div>
-        <img src='/images/image-4.svg' alt="" />
+        <img src='/images/image-4.svg' alt="New Deal Image"  loading="lazy"/>
       </div>
 
       <Service />

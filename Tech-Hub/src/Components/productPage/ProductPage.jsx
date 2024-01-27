@@ -2,7 +2,8 @@ import './productpage.scss'
 import { useParams } from 'react-router-dom'
 import { useAppContext } from '../Global'
 import { Link } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
+
 
 const ProductPage = () => {
   useEffect(() => {
@@ -45,7 +46,7 @@ const ProductPage = () => {
     <div className='product'>
       <div className='wrapper'>
         <div className='img-cont'>
-          <img src={product.img} alt="" />
+          <img src={product.img} alt={product.name}  loading="lazy"/>
         </div>
         <div className='details'>
           <h3>{product.name}</h3>
@@ -66,7 +67,7 @@ const ProductPage = () => {
               <Link onClick={() => setAddedToCart(prev => false)} to={`/product/${item.id}`} key={i}>
                 <div className='item'>
                   <div className='img-cont'>
-                    <img src={item.img} alt={item.name} />
+                    <img src={item.img} alt={item.name}  loading="lazy"/>
                   </div>
                   <h3>{item.name}</h3>
                   <p>{item.price} kr</p>

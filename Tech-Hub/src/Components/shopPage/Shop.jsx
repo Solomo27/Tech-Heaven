@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import './shop.scss'
 import { useAppContext } from '../Global'
 import { Link } from 'react-router-dom'
@@ -16,7 +16,7 @@ const Shop = () => {
   const items = ['all','phones', 'tv and home', 'ipads','accessories', 'laptops', 'watches']
   const orderItems = ['latest', 'oldest']
   const [checkedCategory, setCheckedCategory] = useState(currentCategory) 
-  const [order, setOrder] = useState('latest')
+  const [order, setOrder] = useState('oldest')
 
   function handleChange(e) {
     const value = e.target.value
@@ -29,7 +29,7 @@ const Shop = () => {
   }, [currentCategory]);
 
   const filteredProducts = checkedCategory === 'all' ? products: products.filter(item => item.category === checkedCategory)
-
+  const sortedItems = [...filteredProducts].sort((a,b) => order === 'latest' ? b.id - a.id: a.id - b.id)
 
   return (
     <div className='shop'>
@@ -60,11 +60,11 @@ const Shop = () => {
     
           
         <div className='products'>
-          {filteredProducts.map((item, i) => (
+          {sortedItems.map((item, i) => (
               <Link key={i} to={`/product/${item.id}`}>
                 <div className="item">
                   <div className="img-cont">
-                    <img src={item.img} alt={item.name} />
+                    <img src={item.img} alt={item.name}  loading="lazy"/>
                   </div>
                   <h4>{item.name}</h4>
                   <p>{item.price} kr</p>

@@ -30,7 +30,7 @@ const Collection = () => {
             <Link key={i} to={`/product/${item.id}`}>
               <div className="item">
                 <div className="img-cont">
-                  <img src={item.img} alt={item.name} />
+                  <img src={item.img} alt={item.name}  loading="lazy"/>
                 </div>
                 <h4>{item.name}</h4>
                 <p className="desc">{item.desc}</p>

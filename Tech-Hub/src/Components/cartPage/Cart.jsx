@@ -43,7 +43,7 @@ const Cart = () => {
             {cart.map((item,i) => (
               <div className="item" key={i}>
                 <div className="desc">
-                  <img src={item.img} alt="device" />
+                  <img src={item.img} alt={item.name}  loading="lazy"/>
                   <h3>{item.name}</h3>
                 </div>
                 <div className="quantity">

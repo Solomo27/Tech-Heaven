@@ -77,11 +77,13 @@
 
     img {
         position: absolute;
-        width: 100%;
+        width: 80%;
+        right: 0;
         bottom: 0;
         @media (max-width: 1800px) {
             width: 90%;
         }
+        
         @media (max-width: 980px) {
             display: none;
         }
